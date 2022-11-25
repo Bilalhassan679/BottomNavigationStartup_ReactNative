@@ -8,6 +8,7 @@ const Home = () => {
     <View style={styles.container}>
       {/* <Text>Home</Text> */}
       <ModalComponent/>
+      
     </View>
   )
 }
