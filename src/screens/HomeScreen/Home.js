@@ -4,9 +4,18 @@ import { styles } from './style'
 import ModalComponent from '../../Components/ModalComponent'
 import UseCallBack from '../../ExampleHooks/UseCallBack'
 import ActivityIndicatorComp from '../../Components/ActivityIndicatorComp'
+import SwitchComponent from '../../Components/SwitchComponent'
 
 const Home = () => {
-    {/* ******************2CallBack************************* */}
+ {/* ******************Switch************************ */}
+  const [isEnabled,setIsEnabled]=useState();
+  const toggleValue=()=>setIsEnabled(prevValue=>!prevValue);
+  const [second,setSecond]=useState();
+  const toggleValue2=()=>setSecond(prevValue=>!prevValue)
+ {/* ******************Switch************************ */}
+
+ 
+{/* ******************2CallBack************************* */}
   // const [count,setCount]=useState(0);
   // const handleIncreament=useCallback(()=>{
   //    console.log('HandleCallBack');
@@ -39,6 +48,11 @@ const Home = () => {
     {/* <ActivityIndicatorComp size='small' color={'red'}/> */}
     {/* ******************ActivatyIndicator************************ */}
 
+
+ {/* ******************Switch************************ */}
+      <SwitchComponent value={isEnabled} onValueChange={toggleValue}/>
+      <SwitchComponent value={second} onValueChange={toggleValue2}/>
+{/* ******************Switch************************ */}
     </View>
     </>
 
