@@ -29,7 +29,6 @@ const ModalComponent = () => {
         <Pressable onPress={()=>setModalVisibility(true)} style={[styles.button,styles.buttonOpen]}>
             <Text style={styles.textStyle}>Show Modal</Text>
         </Pressable>
-        <Text>as</Text>
     </View>
   );
 };

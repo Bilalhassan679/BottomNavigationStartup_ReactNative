@@ -3,23 +3,28 @@ import React,{useState,useCallback} from 'react'
 import { styles } from './style'
 import ModalComponent from '../../Components/ModalComponent'
 import UseCallBack from '../../ExampleHooks/UseCallBack'
+import ActivityIndicatorComp from '../../Components/ActivityIndicatorComp'
 
 const Home = () => {
-  const [count,setCount]=useState(0);
-  const handleIncreament=useCallback(()=>{
-     console.log('HandleCallBack');
-  },[])
+    {/* ******************2CallBack************************* */}
+  // const [count,setCount]=useState(0);
+  // const handleIncreament=useCallback(()=>{
+  //    console.log('HandleCallBack');
+  // },[])
+    {/* ******************2CallBack************************* */}
 
   return (
     <>
     <View style={styles.container}>
       {/* <Text>Home</Text> */}
       {/* <ModalComponent/> */}
-      <UseCallBack todo={handleIncreament}/>
 
-      <Text>{count}</Text>
+
+    {/* ******************2CallBack************************* */}
+      {/* <UseCallBack todo={handleIncreament}/> */}
+      {/* <Text>{count}</Text>
       <TouchableOpacity onPress={()=>setCount(count+1)}>
-      <Text onP>
+      <Text >
         Increament
       </Text>
       </TouchableOpacity>
@@ -27,9 +32,14 @@ const Home = () => {
       <Text>
         decrement
       </Text>
-      </TouchableOpacity>
-    </View>
+      </TouchableOpacity> */}
+    {/* ******************2CallBack************************ */}
 
+    {/* ******************ActivatyIndicator************************ */}
+    {/* <ActivityIndicatorComp size='small' color={'red'}/> */}
+    {/* ******************ActivatyIndicator************************ */}
+
+    </View>
     </>
 
   )
