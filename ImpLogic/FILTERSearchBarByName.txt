@@ -1,0 +1,32 @@
+
+
+useEffect(() => {
+    const fetchUsers = async () => {
+      const data = await getUsers();
+      console.log(data, 'ljlkajlkajalkjal'); // Access the usersData array here
+      setUsers(data); //IN THIS LINE SAVE USERS IN State From api
+
+    };
+    fetchUsers();
+  }, []);
+
+  //FILTER LOGIC SCREEN
+  const [text, onChangeText] = React.useState('');
+  const [searchData, setSearchData] = React.useState([]);
+
+  React.useEffect(() => {
+    const filterData = () => {
+      if (text.trim() === '') {
+        setSearchData(users);
+      } else {
+        const filteredData = users.filter(item => {
+          const itemName = item.name.toLowerCase();
+          const searchText = text.toLowerCase();
+          return itemName.includes(searchText);
+        });
+        setSearchData(filteredData);
+      }
+    };
+
+    filterData();
+  }, [text, users]);
